@@ -1,0 +1,37 @@
+footer {
+	position: sticky;
+	inset: auto 0% 0%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer-block {
+	width: 100%;
+	padding: 50px;
+
+	justify-content: center;
+
+	background-color: var(--Black);
+	color: var(--White);
+
+	z-index: -2;
+}
+
+.footer-wraper {
+	position: relative;
+
+	justify-content: center;
+}
+
+.logo-decore {
+	position: absolute;
+
+	color: #232425;
+	font-size: 100px;
+	font-weight: 900;
+	text-box: trim-both ex alphabetic;
+
+	z-index: -1;
+}

@@ -1,0 +1,29 @@
+header {
+	height: 100px;
+	width: 100%;
+
+	background-color: var(--Black);
+	color: var(--White);
+
+	@media (max-width:768px) {
+		height: 75px;
+	}
+}
+
+.header-wraper {
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+
+.hamburger {
+	width: 30px;
+}
+
+.header-nav_list{
+	font-size: 20px;
+	list-style: none;
+
+	gap: 20px;
+}

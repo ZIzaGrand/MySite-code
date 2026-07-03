@@ -1,0 +1,76 @@
+.contacts {
+	padding-top: 100px;
+	padding-bottom: 150px;
+
+	flex-direction: column;
+	align-items: center;
+	gap: 70px;
+}
+
+.contacts-wraper{
+	position: relative;
+}
+
+.contacts-plus {
+	position: absolute;
+}
+
+.contacts-plus:first-child{
+	top: -135px;
+	left: -120px;
+}
+
+.contacts-plus:nth-child(2){
+	top: -135px;
+	right: -120px;
+}
+
+.contacts-plus:nth-child(3){
+	bottom: -80px;
+	left: -120px;
+}
+
+.contacts-plus:nth-child(4) {
+	bottom: -80px;
+	right: -120px;
+}
+
+.contacts-content{
+	flex-direction: column;
+	gap: 100px;
+}
+
+.contact {
+	position: relative;
+}
+
+.contact h2{
+	font-size: 100px;
+	font-weight: 900;
+	color: var(--Light-gray);
+
+	z-index: -1;
+}
+
+.contact:first-child h2 {
+	position: absolute;
+	top: -57px;
+	left: -45px;
+}
+
+.contact:nth-child(2) h2 {
+	position: absolute;
+	top: -57px;
+	left: -75px;
+}
+
+.contact:nth-child(3) h2 {
+	position: absolute;
+	top: -57px;
+	left: 75px;
+}
+
+.contact a {
+	text-decoration: none;
+	color: var(--Black);
+}

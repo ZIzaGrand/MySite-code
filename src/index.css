@@ -1,0 +1,138 @@
+@font-face {
+	font-family: 'jetbrains-mono';
+	src: url(/src/assets/fonts/jetBrains/jetbrains-mono-variable.ttf);
+	font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+	--Black: #121314;
+	--White: #ffffff;
+	--Light-gray: #F3F3F3;
+	--Orange: #FF9500;
+
+	--desctop-width: 1200px;
+	--max-mobile-width:768px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+	overflow-x: hidden;
+
+	font-family: "jetbrains-mono", sans-serif;
+ 	margin: 0;
+}
+
+header, main, footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+h1, h2, p {
+  margin: 0;
+}
+
+main section{
+	margin-bottom: 200px;
+}
+
+.flex {
+	display: flex;
+}
+
+
+.wraper {
+	width: 100%;
+	max-width: var(--desctop-width);
+	margin: 0 40px;
+	/* border: #7c7c7c 1px solid; */
+}
+
+
+
+
+
+
+.text-logo{
+	font-size: 30px;
+	font-weight: 900;
+
+	@media (max-width:768px) {
+		font-size: 30px;
+	}
+}
+
+.text-hero{
+	font-size: 8.75rem;
+	font-weight: 900;
+
+	@media (max-width:768px) {
+		font-size: 5rem;
+	}
+}
+
+.text-header-hero{
+	font-size: 30px;
+	font-weight: 100;
+}
+
+.text-header{	
+	font-size: 40px;
+	font-weight: 100;
+}
+
+.text-header span {
+	font-weight: 700;
+}
+
+.text-header-decore{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.text-sub-header{
+	font-size: 35px;
+	font-weight: 900;
+}
+
+.text-contacts{
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.text-regular{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.text-list{
+	font-size: 16px;
+	font-weight: 200;
+}
+
+.text {
+	font-size: 16px;
+	font-weight: 100;
+}
