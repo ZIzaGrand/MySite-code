@@ -1,6 +1,9 @@
 import "./Hero.css"
+import { useAppContext } from "./components/context/AppContext"
+
 
 export function Hero() {
+	const {isMobile} = useAppContext()
 
 
 	return(<>
@@ -13,7 +16,7 @@ export function Hero() {
 				<h1 className="scobka">{"}"}</h1>
 				<h1 className="text-hero hero-header_rigth">Site</h1>
 			</div>
-			<h1 className="text-header hero-name">{"<Denis Zhukov/>"}</h1>
+			<h1 hidden={isMobile} className="text-header hero-name">{"<Denis Zhukov/>"}</h1>
 			<div className=" flex hero-cards">
 				<img className="hero-plus" src="/src/assets/image/plus.svg" alt="" />
 				<img className="hero-plus" src="/src/assets/image/plus.svg" alt="" />

@@ -1,6 +1,8 @@
 import "./Contacts.css"
 
+
 export function Contacts() {
+
 	return(<>
 		<section className="flex contacts">
 			<h1 className="text-header"><span>{"<"}</span>{"Contacts"}<span>{"/>"}</span></h1>

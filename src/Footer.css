@@ -10,6 +10,7 @@ footer {
 .footer-block {
 	width: 100%;
 	padding: 50px;
+	box-sizing: border-box;
 
 	justify-content: center;
 
@@ -17,6 +18,10 @@ footer {
 	color: var(--White);
 
 	z-index: -2;
+
+	@media (max-width:768px) {
+		padding: 30px;
+	}
 }
 
 .footer-wraper {

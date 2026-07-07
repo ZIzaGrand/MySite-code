@@ -17,6 +17,10 @@ export function Portfolio() {
 				<h1 className="text-header"><span>{"<"}</span>{"Portfolio"}<span>{"/>"}</span></h1>
 				<img hidden={isMobile} className="" src="/src/assets/image/portfolio.svg" alt="" />
 			</div>
+			<div hidden={!isMobile} className="portfolio-mobile_block">
+				<img src="/src/assets/image/portfoliio_mobile.svg" alt="" />
+				<p className="text">{"<iframe/>"}</p>
+			</div>
 			<div className="browser">
 				<div className="flex tabs">
 					{tabList.map((value, index) => 

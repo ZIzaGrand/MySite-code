@@ -18,7 +18,7 @@ function ModelViewer() {
 
         <Model />
 
-        <OrbitControls  enableZoom={false} autoRotate={true}/>
+        <OrbitControls  enableZoom={false} autoRotate={true} autoRotateSpeed={4}/>
       </Canvas>
     </div>
   );
@@ -42,6 +42,11 @@ export function About() {
 					<img className="model-plus" src="/src/assets/image/plus.svg" alt="" />
 					<ModelViewer/>
 				</div>
+				<div hidden={!isMobile} className="flex about-mobile_block">
+					<img src="/src/assets/image/about_mobile.svg" alt="" />
+					<h1  className="text-sub-header about-name">{"<Denis Zhukov/>"}</h1>
+					<img src="/src/assets/image/about_mobile.svg" alt="" />
+				</div>
 				<div className="flex about-content">
 					<p className="text">
 						Занимаюсь программированием и вёрсткой более 3 лет. Помогу создать для вас современный и качественный сайт — от продуманного дизайна до полной реализации.
@@ -57,9 +62,9 @@ export function About() {
 					<img className="sber" src="/src/assets/image/sber.svg" alt="" />
 				</div>
 			</div>
-			<div className="flex about-footer">
+			<div hidden={isMobile} className="flex about-footer">
 				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
-				<h1 className="text-logo about-footer_logo">{"|)>|<"}</h1>
+				<h1 hidden={isMobile} className="text-logo about-footer_logo">{"|)>|<"}</h1>
 				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
 			</div>
 		</section>

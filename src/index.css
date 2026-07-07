@@ -14,6 +14,7 @@
 
 	--desctop-width: 1200px;
 	--max-mobile-width:768px;
+	--mobile-width:335px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,10 +31,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-}
-
-html {
-
 }
 
 body {
@@ -55,7 +52,11 @@ h1, h2, p {
 }
 
 main section{
-	margin-bottom: 200px;
+	margin-bottom: 150px;
+
+	@media (max-width:768px) {
+		margin-bottom: 100px;
+	}
 }
 
 .flex {
@@ -67,7 +68,11 @@ main section{
 	width: 100%;
 	max-width: var(--desctop-width);
 	margin: 0 40px;
-	/* border: #7c7c7c 1px solid; */
+
+	@media (max-width:768px) {
+		max-width: var(--mobile-width);
+		margin: 0 20px;
+	}
 }
 
 
@@ -96,35 +101,47 @@ main section{
 .text-header-hero{
 	font-size: 30px;
 	font-weight: 100;
+
+	@media (max-width:768px) {
+		font-size: 25px;
+	}
 }
 
 .text-header{	
 	font-size: 40px;
 	font-weight: 100;
+
+	@media (max-width:768px) {
+		font-size: 30px;
+	}
 }
 
 .text-header span {
 	font-weight: 700;
 }
 
-.text-header-decore{
-	font-size: 40px;
-	font-weight: bold;
-}
-
 .text-sub-header{
 	font-size: 35px;
 	font-weight: 900;
+
+	@media (max-width:768px) {
+		font-size: 25px;
+	}
 }
 
 .text-contacts{
 	font-size: 25px;
 	font-weight: 400;
+
+	@media (max-width:768px) {
+		font-size: 20px;
+	}
 }
 
 .text-regular{
 	font-size: 18px;
 	font-weight: 400;
+
 }
 
 .text-list{
@@ -135,4 +152,8 @@ main section{
 .text {
 	font-size: 16px;
 	font-weight: 100;
+
+	@media (max-width:768px) {
+		font-size: 14px;
+	}
 }

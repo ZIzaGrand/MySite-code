@@ -5,6 +5,11 @@
 
 	flex-direction: column;
 	justify-content: center;
+
+	@media (max-width:768px) {
+		margin: 0 0 100px 0;
+	}
+
 }
 
 .about-header, .about-footer {
@@ -37,9 +42,14 @@
 }
 
 
-.about-wraper {flex-direction: column;
+.about-wraper {
 	justify-content: space-around;
 	align-items: center;
+
+	@media (max-width:768px) {
+		flex-direction: column;
+		gap: 10px;
+	}
 }
 
 .model-wraper{
@@ -78,6 +88,24 @@
 	background-repeat: space;
 }
 
+.about-mobile_block {
+	align-items: end;
+	gap: 10px;
+}
+
+.about-mobile_block img:last-child{
+	transform: scaleX(-1);
+}
+
+.about-name {
+	margin-top: 50px;
+
+	position: relative;
+	top: -18px;
+
+	font-weight: 100;
+}
+
 .about-content{
 	width: 430px;
 
@@ -87,6 +115,10 @@
 	gap: 20px;
 
 	text-align: left;
+
+	@media (max-width:768px) {
+		width: 100%;
+	}
 }
 
 .lesta {

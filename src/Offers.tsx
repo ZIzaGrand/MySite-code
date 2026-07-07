@@ -27,8 +27,6 @@ export function Offers() {
 						<li>Покупка и подключение домена</li>
 					</ul>
 				</div>
-			</div>
-			<div className="flex offers-content">
 				<div className="flex offer">
 					<div className="flex offer-header">
 						<h2 className="text-sub-header">Одностраничный</h2>
@@ -45,8 +43,6 @@ export function Offers() {
 						<li>Размещение сайта на хостинге</li>
 					</ul>
 				</div>
-			</div>
-			<div className="flex offers-content">
 				<div className="flex offer">
 					<div className="flex offer-header">
 						<h2 className="text-sub-header">Многостраничный</h2>

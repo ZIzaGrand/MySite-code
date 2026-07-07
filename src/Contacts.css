@@ -5,6 +5,11 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 70px;
+
+	@media (max-width:768px) {
+		padding-top: 50px;
+		padding-bottom: 100px;
+	}
 }
 
 .contacts-wraper{
@@ -73,4 +78,58 @@
 .contact a {
 	text-decoration: none;
 	color: var(--Black);
+}
+
+
+@media (max-width:768px) {
+	.contact h2{
+		font-size: 50px;
+		font-weight: 900;
+		color: var(--Light-gray);
+
+		z-index: -1;
+	}
+
+	.contact:first-child h2 {
+		position: absolute;
+		top: -25px;
+		left: 35px;
+	}
+
+	.contact:nth-child(2) h2 {
+		position: absolute;
+		top: -25px;
+		left: 21px;
+	}
+
+	.contact:nth-child(3) h2 {
+		position: absolute;
+		top: -25px;
+		left: 95px;
+	}
+
+
+	.contacts-plus {
+		width: 40px;
+	}
+
+	.contacts-plus:first-child{
+		top: -130px;
+		left: -20px;
+	}
+
+	.contacts-plus:nth-child(2){
+		top: -130px;
+		right: -20px;
+	}
+
+	.contacts-plus:nth-child(3){
+		bottom: -50px;
+		left: -20px;
+	}
+
+	.contacts-plus:nth-child(4) {
+		bottom: -50px;
+		right: -20px;
+	}
 }

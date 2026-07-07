@@ -21,15 +21,27 @@
 }
 
 .offer {
-	flex-direction: column;
 	align-items: center;
 	gap: 40px;
+
+	@media (max-width:768px) {
+		padding: 12px;
+		border: solid 1px black;
+		
+		flex-direction: column;
+		gap: 30px;
+	}
 }
 
 .offer-header{
 	width: 310px;
 
 	flex-direction: column;
+	align-items: end;
+
+	@media (max-width:768px) {
+		align-items:center;
+	}
 }
 
 .offers-header h1 {
@@ -48,10 +60,15 @@
 	max-width: 340px;
 
 	text-align: left;
+
+	@media (max-width:768px) {
+		text-align: center;
+	}
 }
 
 .offer-list {
 	text-align: left;
+	padding: 0;
 }
 
 .offers-decore {
