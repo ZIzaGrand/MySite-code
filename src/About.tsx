@@ -7,52 +7,52 @@ import { useProgress } from "@react-three/drei";
 import Decore from "./assets/image/about decore.svg"
 import Plus from "./assets/image/plus.svg"
 import Mobile from "./assets/image/about_mobile.svg"
-import Sber from "./assets/image/sber.svg"
-import Lesta from "./assets/image/lesta.svg"
+// import Sber from "./assets/image/sber.svg"
+// import Lesta from "./assets/image/lesta.svg"
 
 
-function Loader() {
-  const { active, progress } = useProgress();
+// function Loader() {
+//   const { active, progress } = useProgress();
 
-  if (!active) return null;
+//   if (!active) return null;
 
-  return (
-    <div className="model-loader">
-      <p>Загрузка 3D-модели...</p>
-      <p>{Math.round(progress)}%</p>
+//   return (
+//     <div className="model-loader">
+//       <p>Загрузка 3D-модели...</p>
+//       <p>{Math.round(progress)}%</p>
 
-      <div className="loader-line">
-        <div
-          className="loader-line__progress"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
-    </div>
-  );
-}
+//       <div className="loader-line">
+//         <div
+//           className="loader-line__progress"
+//           style={{ width: `${progress}%` }}
+//         />
+//       </div>
+//     </div>
+//   );
+// }
 
-function Model() {
-  const { scene } = useGLTF("/model/Me.glb");
+// function Model() {
+//   const { scene } = useGLTF("/model/Me.glb");
 
-  return <primitive object={scene} scale={1} />;
-}
+//   return <primitive object={scene} scale={1} />;
+// }
 
-function ModelViewer() {
-  return (
-    <div className="model" >
-      <Canvas camera={{ position: [0, 0.5, 2.2], fov: 50 }}>
-        <ambientLight intensity={1} />
-        <directionalLight position={[2, 2, 2]} intensity={2} />
-		<Suspense fallback={null}>
-        	<Model />
-		</Suspense>
-        <OrbitControls  enableZoom={false} autoRotate={true} autoRotateSpeed={4}/>
-      </Canvas>
+// function ModelViewer() {
+//   return (
+//     <div className="model" >
+//       <Canvas camera={{ position: [0, 0.5, 2.2], fov: 50 }}>
+//         <ambientLight intensity={1} />
+//         <directionalLight position={[2, 2, 2]} intensity={2} />
+// 		<Suspense fallback={null}>
+//         	<Model />
+// 		</Suspense>
+//         <OrbitControls  enableZoom={false} autoRotate={true} autoRotateSpeed={4}/>
+//       </Canvas>
 
-	  <Loader />
-    </div>
-  );
-}
+// 	  <Loader />
+//     </div>
+//   );
+// }
 
 export function About() {
 	const {isMobile} = useAppContext()
