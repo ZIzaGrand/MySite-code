@@ -2,9 +2,37 @@ import "./About.css"
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useAppContext } from "./components/context/AppContext";
+import { Suspense } from "react"
+import { useProgress } from "@react-three/drei";
+import Decore from "./assets/image/about decore.svg"
+import Plus from "./assets/image/plus.svg"
+import Mobile from "./assets/image/about_mobile.svg"
+import Sber from "./assets/image/sber.svg"
+import Lesta from "./assets/image/lesta.svg"
+
+
+function Loader() {
+  const { active, progress } = useProgress();
+
+  if (!active) return null;
+
+  return (
+    <div className="model-loader">
+      <p>Загрузка 3D-модели...</p>
+      <p>{Math.round(progress)}%</p>
+
+      <div className="loader-line">
+        <div
+          className="loader-line__progress"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+    </div>
+  );
+}
 
 function Model() {
-  const { scene } = useGLTF("/src/assets/model/Me.glb");
+  const { scene } = useGLTF("/model/Me.glb");
 
   return <primitive object={scene} scale={1} />;
 }
@@ -15,11 +43,13 @@ function ModelViewer() {
       <Canvas camera={{ position: [0, 0.5, 2.2], fov: 50 }}>
         <ambientLight intensity={1} />
         <directionalLight position={[2, 2, 2]} intensity={2} />
-
-        <Model />
-
+		<Suspense fallback={null}>
+        	<Model />
+		</Suspense>
         <OrbitControls  enableZoom={false} autoRotate={true} autoRotateSpeed={4}/>
       </Canvas>
+
+	  <Loader />
     </div>
   );
 }
@@ -30,23 +60,23 @@ export function About() {
 	return(<>
 		<section id="about" className="flex about">
 			<div className="flex about-header">
-				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
+				<img hidden={isMobile} src={Decore} alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"About"}<span>{"/>"}</span></h1>
-				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
+				<img hidden={isMobile} src={Decore} alt="" />
 			</div>
 			<div className="flex about-wraper">
 				<div className="model-wraper">
-					<img className="model-plus" src="/src/assets/image/plus.svg" alt="" />
-					<img className="model-plus" src="/src/assets/image/plus.svg" alt="" />
-					<img className="model-plus" src="/src/assets/image/plus.svg" alt="" />
-					<img className="model-plus" src="/src/assets/image/plus.svg" alt="" />
+					<img className="model-plus" src={Plus} alt="" />
+					<img className="model-plus" src={Plus} alt="" />
+					<img className="model-plus" src={Plus} alt="" />
+					<img className="model-plus" src={Plus} alt="" />
 					<ModelViewer/>
 				</div>
 				{isMobile && (
 					<div className="flex about-mobile_block">
-						<img src="/src/assets/image/about_mobile.svg" alt="" />
+						<img src={Mobile} alt="" />
 						<h1  className="text-sub-header about-name">{"<Denis Zhukov/>"}</h1>
-						<img src="/src/assets/image/about_mobile.svg" alt="" />
+						<img src={Mobile} alt="" />
 					</div>
 				)}
 				<div className="flex about-content">
@@ -60,14 +90,14 @@ export function About() {
 						При необходимости помогу с покупкой домена, настройкой хостинга и размещением сайта в интернете.
 					</p>
 					<p className="text-regular">Работал в компаниях:</p>
-					<img className="lesta" src="/src/assets/image/lesta.svg" alt="" />
-					<img className="sber" src="/src/assets/image/sber.svg" alt="" />
+					<img className="lesta" src={Lesta} alt="" />
+					<img className="sber" src={Sber} alt="" />
 				</div>
 			</div>
 			<div hidden={isMobile} className="flex about-footer">
-				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
+				<img hidden={isMobile} src={Decore} alt="" />
 				<h1 hidden={isMobile} className="text-logo about-footer_logo">{"|)>|<"}</h1>
-				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
+				<img hidden={isMobile} src={Decore} alt="" />
 			</div>
 		</section>
 	</>)

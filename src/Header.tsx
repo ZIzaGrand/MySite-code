@@ -1,5 +1,9 @@
 import { useAppContext } from "./components/context/AppContext"
 import "./Header.css"
+import Hamburger from "./assets/image/hamburger.svg"
+// import HamburgerClose from "./assets/image/hamburger close.png"
+
+
 
 export function Header() {
 	const {isMobile} = useAppContext();
@@ -10,7 +14,7 @@ export function Header() {
 		<div className="flex wraper header-wraper">
 			<h1 className="text-logo">{"|)>|<"}</h1>
 			{isMobile ?
-				<img className="hamburger" src="/src/assets/image/hamburger.svg" alt="Menu" />
+				<img className="hamburger" src={Hamburger} alt="Menu" />
 				:
 				<nav>
 					<ul className="flex header-nav_list">

@@ -65,6 +65,8 @@ h1, h2, p {
 
 main section{
 	margin-bottom: 150px;
+	
+	scroll-margin-top: 50px;
 
 	@media (max-width:768px) {
 		margin-bottom: 100px;
@@ -95,6 +97,7 @@ main section{
 .text-logo{
 	font-size: 30px;
 	font-weight: 900;
+	letter-spacing: -20%;
 
 	@media (max-width:768px) {
 		font-size: 30px;

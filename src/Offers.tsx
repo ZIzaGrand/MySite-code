@@ -1,5 +1,9 @@
 import "./Offers.css"
 import { useAppContext } from "./components/context/AppContext"
+import Header from "./assets/image/offers_header.svg"
+import Content from "./assets/image/offers_content.svg"
+
+
 
 export function Offers() {
 	const {isMobile} = useAppContext()
@@ -7,15 +11,15 @@ export function Offers() {
 	return(<>
 		<section id="offers" className="flex offers">
 			<div className="flex offers-header">
-				<img hidden={isMobile} className="" src="/src/assets/image/offers_header.svg" alt="" />
+				<img hidden={isMobile} className="" src={Header} alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"Offers"}<span>{"/>"}</span></h1>
-				<img hidden={isMobile} className="" src="/src/assets/image/offers_header.svg" alt="" />
+				<img hidden={isMobile} className="" src={Header} alt="" />
 			</div>
 			<div className="flex offers-content">
 				<div className="flex offer">
 					<div className="flex offer-header">
 						<h2 className="text-sub-header">Tilda</h2>
-						<img hidden={isMobile} src="/src/assets/image/offers_content.svg" alt="" />
+						<img hidden={isMobile} src={Content} alt="" />
 					</div>
 					<div className="offer-description">
 						<p className="text">Создание сайта на тильде это быстрый и надёжный сопособ запусть сайт за один день.</p>
@@ -30,7 +34,7 @@ export function Offers() {
 				<div className="flex offer">
 					<div className="flex offer-header">
 						<h2 className="text-sub-header">Одностраничный</h2>
-						<img hidden={isMobile} src="/src/assets/image/offers_content.svg" alt="" />
+						<img hidden={isMobile} src={Content} alt="" />
 					</div>
 					<div className="offer-description">
 						<p className="text">Создание сайта на тильде это быстрый и надёжный сопособ запусть сайт за один день.</p>
@@ -46,7 +50,7 @@ export function Offers() {
 				<div className="flex offer">
 					<div className="flex offer-header">
 						<h2 className="text-sub-header">Многостраничный</h2>
-						<img hidden={isMobile} src="/src/assets/image/offers_content.svg" alt="" />
+						<img hidden={isMobile} src={Content} alt="" />
 					</div>
 					<div className="offer-description">
 						<p className="text">Создание сайта на тильде это быстрый и надёжный сопособ запусть сайт за один день.</p>
