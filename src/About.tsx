@@ -79,7 +79,7 @@ export function About() {
 						<img src={Mobile} alt="" />
 					</div>
 				)}
-				<div className="flex about-content">
+				{/* <div className="flex about-content">
 					<p className="text">
 						Занимаюсь программированием и вёрсткой более 3 лет. Помогу создать для вас современный и качественный сайт — от продуманного дизайна до полной реализации.
 					</p>
@@ -92,7 +92,7 @@ export function About() {
 					<p className="text-regular">Работал в компаниях:</p>
 					<img className="lesta" src={Lesta} alt="" />
 					<img className="sber" src={Sber} alt="" />
-				</div>
+				</div> */}
 			</div>
 			<div hidden={isMobile} className="flex about-footer">
 				<img hidden={isMobile} src={Decore} alt="" />
