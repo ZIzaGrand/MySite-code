@@ -28,7 +28,7 @@ export function About() {
 	const {isMobile} = useAppContext()
 
 	return(<>
-		<section className="flex about">
+		<section id="about" className="flex about">
 			<div className="flex about-header">
 				<img hidden={isMobile} src="/src/assets/image/about decore.svg" alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"About"}<span>{"/>"}</span></h1>
@@ -42,11 +42,13 @@ export function About() {
 					<img className="model-plus" src="/src/assets/image/plus.svg" alt="" />
 					<ModelViewer/>
 				</div>
-				<div hidden={!isMobile} className="flex about-mobile_block">
-					<img src="/src/assets/image/about_mobile.svg" alt="" />
-					<h1  className="text-sub-header about-name">{"<Denis Zhukov/>"}</h1>
-					<img src="/src/assets/image/about_mobile.svg" alt="" />
-				</div>
+				{isMobile && (
+					<div className="flex about-mobile_block">
+						<img src="/src/assets/image/about_mobile.svg" alt="" />
+						<h1  className="text-sub-header about-name">{"<Denis Zhukov/>"}</h1>
+						<img src="/src/assets/image/about_mobile.svg" alt="" />
+					</div>
+				)}
 				<div className="flex about-content">
 					<p className="text">
 						Занимаюсь программированием и вёрсткой более 3 лет. Помогу создать для вас современный и качественный сайт — от продуманного дизайна до полной реализации.

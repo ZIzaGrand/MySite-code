@@ -4,6 +4,7 @@ import { useAppContext } from "./components/context/AppContext";
 
 const tabList = ["First project", "Second project", "Third project"]
 
+const urlList = ["https://frankfurter.dev/", "https://vuzoteka.ru/", "https://inpsycho.ru/"]
 
 export function Portfolio() {
 	const [activeTab, setActiveTab] = useState(0);
@@ -11,7 +12,7 @@ export function Portfolio() {
 
 
 	return(<>
-		<section className="flex portfolio">
+		<section id="portfolio" className="flex portfolio">
 			<div className="flex portfolio-header">
 				<img hidden={isMobile} className="" src="/src/assets/image/portfolio.svg" alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"Portfolio"}<span>{"/>"}</span></h1>
@@ -35,7 +36,7 @@ export function Portfolio() {
 
 				</div>
 				<div className="flex url">
-					<div className="flex url-search"><p>https://frankfurter.dev/</p></div>
+					<div className="flex url-search"><p>{urlList[activeTab]}</p></div>
 				</div>
 				<iframe className="flex"
 					id="inlineFrameExample"
@@ -44,7 +45,7 @@ export function Portfolio() {
 					height="600px"
 					frameBorder={0}
 					allowFullScreen={true}
-					src="https://frankfurter.dev/"
+					src={urlList[activeTab]}
 				></iframe>
 			</div>
 		</section>

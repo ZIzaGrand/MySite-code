@@ -5,7 +5,7 @@ export function Offers() {
 	const {isMobile} = useAppContext()
 	
 	return(<>
-		<section className="flex offers">
+		<section id="offers" className="flex offers">
 			<div className="flex offers-header">
 				<img hidden={isMobile} className="" src="/src/assets/image/offers_header.svg" alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"Offers"}<span>{"/>"}</span></h1>

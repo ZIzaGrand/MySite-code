@@ -4,7 +4,7 @@ import "./Contacts.css"
 export function Contacts() {
 
 	return(<>
-		<section className="flex contacts">
+		<section id="contacts" className="flex contacts">
 			<h1 className="text-header"><span>{"<"}</span>{"Contacts"}<span>{"/>"}</span></h1>
 			<div className="contacts-wraper">
 				<img className="contacts-plus" src="/src/assets/image/plus_contacts.svg" alt="" />

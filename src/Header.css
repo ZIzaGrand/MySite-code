@@ -8,6 +8,8 @@ header {
 	@media (max-width:768px) {
 		height: 75px;
 	}
+
+	z-index: 1;
 }
 
 .header-wraper {
@@ -26,4 +28,10 @@ header {
 	list-style: none;
 
 	gap: 20px;
+}
+
+.header-nav_list a {
+	color: var(--White);
+
+	cursor: pointer;
 }

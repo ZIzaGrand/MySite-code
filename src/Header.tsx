@@ -14,10 +14,18 @@ export function Header() {
 				:
 				<nav>
 					<ul className="flex header-nav_list">
-						<li>About</li>
-						<li>Portfolio</li>
-						<li>Offers</li>
-						<li>Contacts</li>
+						<a href="#about">
+							<li>About</li>
+						</a>
+						<a href="#portfolio">
+							<li>Portfolio</li>
+						</a>
+						<a href="#offers">
+							<li>Offers</li>
+						</a>
+						<a href="#contacts">
+							<li>Contacts</li>
+						</a>
 					</ul>
 				</nav>
 			}
