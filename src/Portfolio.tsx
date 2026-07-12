@@ -8,7 +8,7 @@ import PortfolioMobile from "./assets/image/portfoliio_mobile.svg"
 
 const tabList = ["First project", "Second project", "Third project"]
 
-const urlList = ["https://frankfurter.dev/", "https://vuzoteka.ru/", "https://inpsycho.ru/"]
+const urlList = ["https://frankfurter.dev/", "https://frankfurter.dev/", "https://frankfurter.dev/"]
 
 export function Portfolio() {
 	const [activeTab, setActiveTab] = useState(0);
