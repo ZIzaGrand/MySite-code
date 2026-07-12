@@ -70,7 +70,7 @@ export function About() {
 					<img className="model-plus" src={Plus} alt="" />
 					<img className="model-plus" src={Plus} alt="" />
 					<img className="model-plus" src={Plus} alt="" />
-					<ModelViewer/>
+					{/* <ModelViewer/> */}
 				</div>
 				{isMobile && (
 					<div className="flex about-mobile_block">
