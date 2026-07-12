@@ -1,4 +1,4 @@
-name: Deploy React to REG.RU
+name: REG_RU_CONNECT
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to REG.RU hosting
+      - name: REG_RU_CONNECT
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
