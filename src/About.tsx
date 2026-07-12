@@ -1,9 +1,9 @@
 import "./About.css"
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useAppContext } from "./components/context/AppContext";
-import { Suspense } from "react"
-import { useProgress } from "@react-three/drei";
+// import { Suspense } from "react"
+// import { useProgress } from "@react-three/drei";
 import Decore from "./assets/image/about decore.svg"
 import Plus from "./assets/image/plus.svg"
 import Mobile from "./assets/image/about_mobile.svg"
