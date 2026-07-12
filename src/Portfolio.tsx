@@ -42,7 +42,7 @@ export function Portfolio() {
 				<div className="flex url">
 					<div className="flex url-search"><p>{urlList[activeTab]}</p></div>
 				</div>
-				<iframe className="flex"
+				{/* <iframe className="flex"
 					id="inlineFrameExample"
 					title="Inline Frame Map"
 					width="100%"
@@ -50,7 +50,7 @@ export function Portfolio() {
 					frameBorder={0}
 					allowFullScreen={true}
 					src={urlList[activeTab]}
-				></iframe>
+				></iframe> */}
 			</div>
 		</section>
 	</>)	
