@@ -13,6 +13,7 @@
 }
 
 .about-header, .about-footer {
+	position: relative;
 	justify-content: center;
 	gap: 35px;
 }
@@ -32,6 +33,23 @@
 .about-header h1 {
 	position: relative;
 	top: -25px;
+}
+
+.about-header p {
+	position: absolute;
+	top: -55px;
+	margin: 0 auto;
+	
+	font-size: 65px;
+	font-weight: 900;
+	color: var(--Light-gray);
+
+	z-index: -2;
+
+	@media (max-width:768px) {
+		top: -60px;	
+		font-size: 65px;
+	}
 }
 
 .about-footer_logo {

@@ -8,6 +8,8 @@
 }
 
 .portfolio-header {
+	position: relative;
+
 	justify-content: center;
 	gap: 20px;
 }
@@ -17,8 +19,23 @@
 	top: -30px;
 }
 
-.portfolio-header img {
+.portfolio-header p {
+	position: absolute;
+	top: -75px;
+	margin: 0 auto;
+	
+	font-size: 85px;
+	font-weight: 900;
+	color: var(--Light-gray);
+
+	z-index: -2;
+
+	@media (max-width:768px) {
+		top: -65px;	
+		font-size: 65px;
+	}
 }
+
 
 .portfolio-header img:last-child {
 	transform: scaleX(-1);

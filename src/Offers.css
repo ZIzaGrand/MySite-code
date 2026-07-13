@@ -9,7 +9,33 @@
 }
 
 .offers-header{
+	width: 100%;
+	position: relative;
+
+	justify-content: center;
 	gap: 20px;
+}
+
+.offers-header h1 {
+	position: relative;
+	top: -25px;
+}
+
+.offers-header p {
+	position: absolute;
+	top: -55px;
+	margin: 0 auto;
+	
+	font-size: 65px;
+	font-weight: 900;
+	color: var(--Light-gray);
+
+	z-index: -2;
+
+	@media (max-width:768px) {
+		top: -60px;	
+		font-size: 65px;
+	}
 }
 
 .offers-header img:last-child{
@@ -47,11 +73,6 @@
 	@media (max-width:768px) {
 		align-items:center;
 	}
-}
-
-.offers-header h1 {
-	position: relative;
-	top: -25px;
 }
 
 .offer-header img {

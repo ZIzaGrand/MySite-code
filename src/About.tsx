@@ -62,6 +62,7 @@ export function About() {
 			<div className="flex about-header">
 				<img hidden={isMobile} src={Decore} alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"About"}<span>{"/>"}</span></h1>
+				<p>Обо мне</p>
 				<img hidden={isMobile} src={Decore} alt="" />
 			</div>
 			<div className="flex about-wraper">

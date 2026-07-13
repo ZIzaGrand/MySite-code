@@ -13,6 +13,7 @@ export function Offers() {
 			<div className="flex offers-header">
 				<img hidden={isMobile} className="" src={Header} alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"Offers"}<span>{"/>"}</span></h1>
+				<p>Услуги</p>
 				<img hidden={isMobile} className="" src={Header} alt="" />
 			</div>
 			<div className="flex offers-content">

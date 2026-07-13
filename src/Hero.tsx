@@ -1,9 +1,9 @@
 import "./Hero.css"
 import { useAppContext } from "./components/context/AppContext"
 import Plus from "./assets/image/plus.svg"
-import Hero1 from "./assets/image/hero1.png"
-import Hero2 from "./assets/image/hero2.png"
-import Hero3 from "./assets/image/hero3.png"
+import Hero1 from "./assets/image/hero design.png"
+import Hero2 from "./assets/image/hero develop.png"
+import Hero3 from "./assets/image/hero deploy.png"
 
 
 
@@ -21,7 +21,11 @@ export function Hero() {
 				<h1 className="scobka">{"}"}</h1>
 				<h1 className="text-hero hero-header_rigth">Site</h1>
 			</div>
-			<h1 hidden={isMobile} className="text-header hero-name">{"<Denis Zhukov/>"}</h1>
+			<h1 hidden={isMobile} className="text-header hero-name">
+				<span>{"<"}</span>
+				{"Denis Zhukov"}
+				<span>{"/>"}</span>
+			</h1>
 			<div className=" flex hero-cards">
 				<img className="hero-plus" src={Plus} alt="" />
 				<img className="hero-plus" src={Plus} alt="" />

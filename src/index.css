@@ -38,6 +38,7 @@ html {
 }
 
 body {
+	width: 100%;
 	overflow-x: hidden;
 
 	font-family: "jetbrains-mono", sans-serif;
@@ -91,17 +92,18 @@ main section{
 
 
 
-
-
-
 .text-logo{
 	font-size: 30px;
 	font-weight: 900;
-	letter-spacing: -20%;
+	
 
 	@media (max-width:768px) {
 		font-size: 30px;
 	}
+}
+
+.text-logo span {
+	letter-spacing: -20%;
 }
 
 .text-hero{

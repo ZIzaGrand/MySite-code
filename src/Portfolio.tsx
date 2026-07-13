@@ -20,6 +20,7 @@ export function Portfolio() {
 			<div className="flex portfolio-header">
 				<img hidden={isMobile} className="" src={PortfolioImg} alt="" />
 				<h1 className="text-header"><span>{"<"}</span>{"Portfolio"}<span>{"/>"}</span></h1>
+				<p>Портфолио</p>
 				<img hidden={isMobile} className="" src={PortfolioImg} alt="" />
 			</div>
 			<div hidden={!isMobile} className="portfolio-mobile_block">
