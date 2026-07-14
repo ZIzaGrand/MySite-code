@@ -8,12 +8,11 @@ import PortfolioMobile from "./assets/image/portfoliio_mobile.svg"
 
 const tabList = ["FX_CHEKER", "Second project", "Third project"]
 
-const urlList = ["https://denis-develop.ru/currebcy-market/", "https://frankfurter.dev/", "https://frankfurter.dev/"]
+const urlList = ["https://denis-develop.ru/currebcy-market", "https://frankfurter.dev", "https://frankfurter.dev"]
 
 export function Portfolio() {
 	const [activeTab, setActiveTab] = useState(0);
 	const {isMobile} = useAppContext()
-
 
 	return(<>
 		<section id="portfolio" className="flex portfolio">
@@ -41,7 +40,7 @@ export function Portfolio() {
 
 				</div>
 				<div className="flex url">
-					<div className="flex url-search"><p>{urlList[activeTab]}</p></div>
+					<div className="flex url-search"><a href={urlList[activeTab]} target="_blank"><p>{urlList[activeTab].slice(8)}</p></a></div>
 				</div>
 				<iframe className="flex"
 					id="inlineFrameExample"
